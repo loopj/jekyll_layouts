@@ -8,8 +8,10 @@ layout: default
 </div>
 
 <div id="share">
+  {% if page.github_repo %}
   <iframe src="http://ghbtns.com/github-btn.html?user=loopj&repo=jquery-simple-slider&type=fork&count=true"
     allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+  {% endif %}
 
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="loopj">Tweet</a>
 </div>
@@ -28,8 +30,8 @@ layout: default
       </a>
     </div>
 
-    {% if page.github_url %}
-    <p id="github">or <a href="{{ page.github_url }}" target="_blank">fork me on github</a></p>
+    {% if page.github_repo %}
+    <p id="github">or <a href="https://github.com/loopj/{{ page.github_repo }}" target="_blank">fork me on github</a></p>
     {% endif %}
   </div>
   {% endif %}

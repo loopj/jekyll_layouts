@@ -27,10 +27,18 @@
   <link rel="stylesheet" type="text/css" href="//loopj.com/css/style.css" />
   <link rel="stylesheet" type="text/css" href="//loopj.com/css/highlight.css" />
 
+  <script src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-1.0.1.min.js" data-apikey="aa8785d344759112f2c64f85b0071373"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script src="//loopj.com/javascript/test.js"></script>
 
   <!-- Code snippet expansion-->
-  <script type="text/javascript"> 
+  <script type="text/javascript">
+    try {
+      throw new Error("loopj.com layout test exception");
+    } catch (e) {
+      Bugsnag.notifyException(e);
+    }
+
     $(document).ready(function() {
       $(".highlight").each(function() {
         var originalWidth = $(this).width();

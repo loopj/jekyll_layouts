@@ -37,12 +37,6 @@
 
   <!-- Code snippet expansion-->
   <script type="text/javascript">
-    try {
-      throw new Error("loopj.com layout test exception");
-    } catch (e) {
-      Bugsnag.notifyException(e);
-    }
-
     $(document).ready(function() {
       $(".highlight").each(function() {
         var originalWidth = $(this).width();
